@@ -3,6 +3,10 @@ let hbs = require('hbs');
 let app = express();
 let fs = require('fs');
 
+let port = process.env.port || 3000;
+
+console.log("port",port);
+
 //Register handle bars partials 
 //partials are small templates that can be reusable
 hbs.registerPartials(__dirname + '/views/templates');
@@ -47,6 +51,6 @@ app.get('/about', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log("server started on port 3000");
+app.listen(port, () => {
+    console.log(`server started on port ${port}`);
 });
