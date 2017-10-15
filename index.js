@@ -30,16 +30,15 @@ app.use((req, res, next) => {
 });
 
 // Register a maintainence middleware
-app.use((req,res)=>{
-    res.render('maintainence.hbs');
-});
+// app.use((req,res)=>{
+//     res.render('maintainence.hbs');
+// });
 
 app.get('/', (req, res) => {
     //render takes two arguments one for the file to render and the second is any obejct to the template
     res.render('home.hbs', {
         title: "Homepage"
     });
-
 });
 
 app.get('/about', (req, res) => {
