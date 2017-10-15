@@ -3,7 +3,7 @@ let hbs = require('hbs');
 let app = express();
 let fs = require('fs');
 
-let port = process.env.port || 3000;
+let port = process.env.PORT || 3000;
 
 console.log("port",port);
 
